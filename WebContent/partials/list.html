@@ -1,0 +1,19 @@
+<table border="1" class="table table-striped">
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Description</td>
+			<!-- <td><i class="icon-plus-sign"></i></td> -->
+			<td>Add</i></td>
+			<td>Edit</i></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="person in persons">
+			<td>{{person.name}}</td>
+			<td>{{person.description}}</td>
+			<td><a href="#/add">Add</a></td>
+			<td><a href="#/edit/{{$index}}">Edit</a></td>
+		</tr>
+	</tbody>
+</table>

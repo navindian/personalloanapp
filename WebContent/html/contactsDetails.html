@@ -1,0 +1,115 @@
+<body bgcolor="#00bfff">
+	<form>
+	<div class="panel panel-default">
+	<div class="panel-heading">Contact Details</div>
+	<div class="panel-body">
+		<table align="center">
+			<tr>
+				<td><label align=center>Residence Address(Present
+						Address)*</label></td>
+			</tr>
+			<tr>
+				<td><label align=center>H.No*</label></td>
+				<td><input type="text" placeholder="Enter House Number"
+					ng-model="customer.hno"></td>
+			</tr>
+			<tr>
+				<td><label align=center>Street Name</label></td>
+				<td><input type="text" placeholder="Enter Street Name"
+					ng-model="customer.streetName"></td>
+			</tr>
+			<tr>
+				<td><label align=center>city</label></td>
+				<td><input type="text" placeholder="Enter City"
+					ng-model="customer.city"></td>
+			</tr>
+			<tr>
+				<td><label align=center>State</label></td>
+				<td><input type="text" placeholder="Enter State"
+					ng-model="customer.State"></td>
+			</tr>
+			<tr>
+				<td><label align=center>Country</label></td>
+				<td><input type="text" placeholder="Enter Country"
+					ng-model="customer.country"></td>
+			</tr>
+			<tr>
+				<td><label align=center>Land Mark*</label></td>
+				<td><input type="text" placeholder="Nearest LandMark"
+					ng-model="customer.landMark"></td>
+			</tr>
+			<tr>
+				<td><label align=center>Pincode*</label></td>
+				<td><input type="text" placeholder="Pincode"
+					ng-model="customer.pincode"></td>
+			</tr>
+			<tr>
+				<td><label align=center>Mobile Number*</label></td>
+				<td><input type="text" placeholder="Enter Mobile Number"
+					ng-model="customer.mobile"></td>
+			</tr>
+			<!-- <tr>
+				<td><label align=center>Residence Address(Permanent
+						Address)</label></td>
+				<td><input type="checkbox" ng-model="customer.paddress"><label
+					align="center">Same As Above</label></td>
+			</tr>
+			<tr>
+				<td><label align=center>H.No*</label></td>
+				<td><input type="text" placeholder="Enter House Number"
+					ng-model="customer.hno"></td>
+			</tr>
+			<tr>
+				<td><label align=center>Street Name</label></td>
+				<td><input type="text" placeholder="Enter Street Name"
+					ng-model="customer.streetName"></td>
+			</tr>
+			<tr>
+				<td><label align=center>city</label></td>
+				<td><input type="text" placeholder="Enter City"
+					ng-model="customer.city"></td>
+			</tr>
+			<tr>
+				<td><label align=center>State</label></td>
+				<td><input type="text" placeholder="Enter State"
+					ng-model="customer.State"></td>
+			</tr>
+			<tr>
+				<td><label align=center>Country</label></td>
+				<td><input type="text" placeholder="Enter Country"
+					ng-model="customer.country"></td>
+			</tr>
+			<tr>
+				<td><label align=center>Land Mark*</label></td>
+				<td><input type="text" placeholder="Nearest LandMark"
+					ng-model="customer.landMark"></td>
+			</tr>
+			<tr>
+				<td><label align=center>Pincode*</label></td>
+				<td><input type="text" placeholder="Pincode"
+					ng-model="customer.pincode"></td>
+			</tr>
+			<tr>
+				<td><label align=center>Mobile Number*</label></td>
+				<td><input type="text" placeholder="Enter Mobile Number"
+					ng-model="customer.mobile"></td>
+			</tr> -->
+			<tr>
+				<td><label align=center>Personal Email*</label></td>
+				<td><input type="text" placeholder="Enter Email"
+					ng-model="customer.email"></td>
+			</tr>
+		</table>
+	</div>
+		<div class="panel-footer" align="center">
+					<button ng-click="back()" class="btn-primary"
+						ng-class="{'button-hidden':checkNextBack()}">< Back</button>
+
+					<button ng-click="edit()" class="btn-primary"
+						ng-class="{'button-hidden':checkEdit()}" align="center">Edit</button>
+					<button ng-click="next()" class="btn-primary"
+						ng-class="{'button-hidden':checkNextBack()}">Next ></button>
+				</div>
+	</form>
+</body>
+</html>
