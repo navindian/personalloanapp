@@ -1,1 +1,1 @@
-Naveen Gayar has checked in the code on AngularJS POC.
+This is the code to demonstrate the features of Angular.
