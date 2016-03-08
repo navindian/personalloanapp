@@ -3,53 +3,55 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Financial Details</div>
 			<div class="panel-body">
+			<label ng-class="{'button-hidden':checkNextBack()}"> <b>Fields marked with * are mandatory</b></label>
+					<br /> <br />
 				<table align="center">
 					
-						<tr>
+						<!-- <tr>
 							<td><label align=center>Bank Account Details</label></td>
-						</tr>
+						</tr> -->
 						<tr>
-							<td><label align=center>Bank Name</label></td>
+							<td><label align=center>Bank Name* </label></td>
 							<td><input type="text" placeholder="Enter Bank name"
-								ng-model="customer.bankName"></td>
+								ng-model="customer.bankName" size="17"></td>
 						</tr>
 						<tr>
-							<td><label align=center>Account Number</label></td>
+							<td><label align=center>Account Number* </label></td>
 							<td><input type="text" placeholder="Enter Account Number"
-								ng-model="customer.accNumber"></td>
+								ng-model="customer.accNumber" size="17"></td>
 						</tr>
 						<tr>
 							<td><label for="singleSelect"> Type of Account</label></td>
 							<td><select name="typeOfAccount"
 								ng-model="customer.typeOfAccount">
-									<option value="">--select--</option>
+									<option value="">--Select--</option>
 									<option value="option-0">Savings</option>
 									<option value="option-0">Current</option>
 							</select></td>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td><label align=center>Loan Details</label></td>
-						</tr>
-						<tr>
+						</tr> -->
+						<!-- <tr>
 							<td><label align=center>Bank Name of the Loan
 									Approver</label></td>
 							<td><input type="text"
 								placeholder="Enter Bank Name of the Loan Approver"
 								ng-model="customer.loanBankName"></td>
-						</tr>
+						</tr> -->
 
 						<tr>
-							<td><label align=center>Loan Amount</label></td>
+							<td><label align=center>Loan Amount* </label></td>
 							<td><input type="text" placeholder="Enter Loan Amount"
-								ng-model="customer.amount"></td>
+								ng-model="customer.amount" size="17"></td>
 						</tr>
 						<tr>
-							<td><label for="singleSelect"> Type of Loan</label></td>
+							<td><label for="singleSelect"> Type of Loan* </label></td>
 							<td><select name="typeOfLoan" ng-model="customer.typeOfLoan">
-									<option value="">--select--</option>
+									<option value="">-Select--</option>
 									<option value="option-0">Home Loan</option>
 									<option value="option-0">Personal Loan</option>
-									<option value="option-0">Car/Vechile Loan</option>
+									<option value="option-0">Car/Vehicle Loan</option>
 									<option value="option-0">Gold Loan</option>
 							</select></td>
 						</tr>
@@ -59,9 +61,10 @@
 					<div class="panel-footer" align="center">
 						<button ng-click="back()" class="btn-primary"
 							ng-class="{'button-hidden':checkNextBack()}">< Back</button>
-
 						<button ng-click="edit()" class="btn-primary"
 							ng-class="{'button-hidden':checkEdit()}" align="center">Edit</button>
+						<button ng-click="save()" class="btn-primary"
+						ng-class="{'button-hidden':checkSave()}" align="center">Save</button>
 						<button ng-click="next()" class="btn-primary"
 							ng-class="{'button-hidden':checkNextBack()}">Next ></button>
 					</div>

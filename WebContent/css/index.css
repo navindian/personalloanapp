@@ -1,27 +1,45 @@
-<style>
+
 header {
-      /* background-color: yellow; */
-      background-color: #e48181;
-      color: purple;
-      text-align: center;
-      padding: 5px;
+	/* background-color: yellow; 
+	background:url("../Capture2.PNG");
+	background-color: #0086b3; /* #007399; /#e48181; */
+	background: radial-gradient(circle, #A82D2D , DarkGray );
+	color: white;
+	text-align: center;
+	padding: 5px;
 }
 
 nav {
-      line-height: 30px;
-      background-color: #eeeeee;
-      height: 300px;
-      width: 100px;
-      float: left;
-      padding: 5px;
+	/* background:url("../Capture2.PNG"); */
+	line-height: 30px;
+	background-color: #eeeeee;
+	height: 300px;
+	width: 100px;
+	float: left;
+	padding: 5px;
 }
 
 section {
-      width: 350px;
-      float: left;
-      padding: 10px;
+	/* background:url("../Capture2.PNG"); */
+	width: 350px;
+	float: left;
+	padding: 10px;
 }
 
+.button-hidden {
+	visibility: hidden;
+}
+body
+{
+	
+	/*background-image: url("../Capture2.PNG");
+    background-repeat: no-repeat; */
+    background: radial-gradient(circle, #A21414 , DarkGray );
+  background-size:cover;
+  height: 1000px;
+  width: 100%;
+  background-repeat: repeat;
+}
 /* footer {
       background-color: green;
       color: white;
@@ -32,14 +50,68 @@ section {
       width:100%
     
 } */
- footer {  
-    position: absolute;
-    width: 100%;
-    height: 30px; /* height of footer */
-    bottom: 5px;
-    margin-top: -1px; /* height of footer */
-     background-color: green;
-      color: white;
-     text-align: center;
+footer {
+/* 	background-image: url("../Capture2.PNG");
+	position: absolute;
+	width: 100%;
+	height: 30px; height of footer
+	bottom: 5px;
+	margin-top: -1px; height of footer
+	background-color: green; */
+	background: radial-gradient(circle, #A21414 , DarkGray );
+	text-align: center;
+}
+/* .panel-body{
+	background-image: url("../Capture2.PNG");
+} */
+.panel{
+	/* background-image: url("../Capture2.PNG"); */
+	background: radial-gradient(circle, #A21414 , DarkGray );
+	color: white;
+	 border: 0;
+	 
+}
+ .panel-body{
+	/* background-image: url("../Capture2.PNG"); */
+	/* background: radial-gradient(circle, #ff6666 , DarkGray ); */
+	background: radial-gradient(circle, #A21414 , DarkGray );
+		font-color: white; 
+		 align: center;
 } 
-</style>
+
+.panel >.panel-footer{
+	/* background-image: url("../Capture2.PNG"); */
+	/* background: radial-gradient(circle, #ff6666 , DarkGray ); */
+	background: radial-gradient(circle, #A21414 , DarkGray );
+		color: white;
+		  border: 0;
+}
+.panel > .panel-heading {
+   /*  background-color: red; */
+  /*  background-image: url("../Capture2.PNG"); */
+  /* background: radial-gradient(circle, #ff6666 , DarkGray ); */
+  background: radial-gradient(circle, #A21414 , DarkGray );
+     color: white;
+      border: 0;
+
+}
+/* .panel.table > thead > tr > th, .table > thead > tr > td {
+    border: 0;
+} */
+textarea:focus, input:focus {
+    color: black;
+}
+
+input, select,date,number, textarea{
+    color: black;
+     /*  background: DarkGray; */
+}
+a {
+    color: white;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #c0c0c0;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #c0c0c0;
+}

@@ -1,44 +1,39 @@
+
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
+
 <head>
+
+<meta charset="utf-8">
+
 <title>ABC Bank</title>
 <link rel="stylesheet"
-	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/index.css">
-<link rel="stylesheet" href="css/style.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script
-	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script      src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script      src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <!-- <script      src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.3/angular2.min.js"></script> -->
-<script
-	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script      src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
 <script src="js/app.js"></script>
-<link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-	<div>
-		<!-- class="container-fluid" style="color: #0000FF" align="center"> -->
-		<header>ABC Bank</header>
-	</div>
-	<div class="container" ng-app="ABCBank" ng-controller="AppCtrl">
-		<ul class="nav nav-tabs nav-pills nav-justified">
-			<li><a href="#/home" data-toggle="tab">Home</a></li>
-			<li><a href="#/personalDetails" data-toggle="tab">Personal
-					Details</a></li>
-			<li><a href="#/contactDetails" data-toggle="tab">Contacts
-					Details</a></li>
-			<li><a href="#/empDetails" data-toggle="tab">Employment
-					Details</a></li>
-			<li><a href="#/financialDetails" data-toggle="tab">Financial
-					Details</a></li>
-			<li><a href="#/reviewSubmit" data-toggle="tab">Review&Submit</a></li>
-		</ul>
-		<ng-view></ng-view>
-	</div>
-	
-	</div>
-	<!-- <footer>@YourBank</footer> -->
-</body>
-</html>
+
+      <div ><!-- class="container-fluid" style="color: #0000FF" align="center"> -->
+            <header>ABC Bank</header>
+      </div>
+      <div class="container" ng-app="ABCBank" ng-controller="AppCtrl">
+            <ul class="nav nav-tabs nav-pills nav-justified">
+                  <li ><a id="home" href="#/home" data-toggle="tab" class="btn">Home</a></li>
+                  <li><a id="personalDetails" href="#/personalDetails" data-toggle="tab" class="btn">PersonalDetails</a></li>                  
+                  <li><a id="contactDetails" href="#/contactDetails" data-toggle="tab" class="btn">ContactsDetails</a></li>
+                  <li><a id="employmentDetails" href="#/empDetails" data-toggle="tab" class="btn">EmploymentDetails</a></li>
+                  <li><a id="financialDetails" href="#/financialDetails" data-toggle="tab" class="btn">FinancialDetails</a></li>                  
+                  <li><a id="review" href="#/reviewSubmit" data-toggle="tab" class="btn">Review&Submit</a></li>
+            </ul>
+            <ng-view></ng-view>
+            </div>
+     
+      <!-- <footer>@YourBank</footer> -->
+     </html>

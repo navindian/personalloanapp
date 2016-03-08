@@ -4,21 +4,18 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Personal Details</div>
 				<div class="panel-body">
-					<!-- <lable align="left">Date</lable>
-					<input type="Date" placeholder="Enter Date"
-						ng-model="customer.TodaysDate"><br /></br>
-					<lable align="left"> <b>Fields in Red Represent
-						Mandatory Fields</b>*</lable> -->
+					
+					<label ng-class="{'button-hidden':checkNextBack()}"> <b>Fields marked with * are mandatory</b></label>
 					<br /> <br />
 					<table align=center>
-						<tr>
+						<!-- <tr>
 							<td><label align=center>Enter Tittle*</label></td>
-							<td><input type="text" placeholder="Enter Title"
+							<td><input type="text" placeholder="Enter Tittle"
 								ng-model="customer.tittle"></td>
-						</tr>
+						</tr> -->
 						<tr>
-							<td><label align=center>Enter First Name*</label></td>
-							<td><input type="text" placeholder="Enter first Name" ng-model="customer.firstName" name="firstName">
+							<td><label align=center>First Name*</label></td>
+							<td><input type="text" placeholder="Enter First Name" ng-model="customer.firstName" name="firstName" required size="15">
 									<span style="color:red" ng-show="myForm.firstName.$pristine &&myForm.firstName.$$touched && myForm.firstName.$invalid">
 									<span ng-show="myForm.user.$error.required">Firstname is required.</span>
 									</span>			
@@ -27,48 +24,48 @@
 						</tr>
 
 						<tr>
-							<td><label align=center>Enter Last Name*</label></td>
+							<td><label align=center>Last Name*</label></td>
 							<td><input type="text" placeholder="Enter Last Name"
-								ng-model="customer.lastName"></td>
+								ng-model="customer.lastName" size="15"></td>
 						</tr>
 						<tr>
-							<td><label align=center>Enter Pancard Number*</label></td>
-							<td><input type="text" placeholder="Enter pancard Number"
-								ng-model="customer.pancard"></td>
+							<td><label align=center>Pancard Number*</label></td>
+							<td><input type="text" placeholder="Enter Pancard"
+								ng-model="customer.pancard" size="15"></td>
 						</tr>
 						<tr>
-							<td><label align=center>Father/Spouse's Name*</label></td>
+							<td><label align=center>Father's Name*</label></td>
 							<td><input type="text"
-								placeholder="Enter Father/Spouse's Name"
-								ng-model="customer.fsName"></td>
+								placeholder="Enter Father's Name"
+								ng-model="customer.fsName" size="15"></td>
 						</tr>
 						<tr>
-							<td><label align=center>Mother's Maiden Name*</label></td>
+							<td><label align=center>Mother's Name*</label></td>
 							<td><input type="text"
-								placeholder="Enter Mother's Maiden Name"
-								ng-model="customer.MaidenName"></td>
+								placeholder="Enter Mother's Name"
+								ng-model="customer.MaidenName" size="15"></td>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td><label align=center>Enter Passport No/Voter
 									ID/Driving Licence</label></td>
 							<td><input type="text"
 								placeholder="Enter Passport No/Voter ID/Driving Licence"
 								ng-model="customer.pvdId"></td>
-						</tr>
+						</tr> -->
 						<tr>
-							<td><label align=center>Enter Date of Birth*</label></td>
+							<td><label align=center>Date of Birth*</label></td>
 							<td><input type="Date" placeholder="Enter Date of Birth"
-								ng-model="customer.dob"></td>
+								ng-model="customer.dob" ></td>
 						</tr>
 						<tr>
-							<td><label align=center>Gender</label></td>
+							<td><label align=center>Gender*</label></td>
 							<td><input type="radio" ng-model="customer.gender"
 								value="male" name="gender" /> Male <input type="radio"
 								ng-model="customer.gender" value="female" name="gender" />
 								Female <input type="radio" ng-model="customer.gender"
 								value="female" name="gender" /> Others</td>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td><label align=center>Status</label></td>
 							<td><input type="radio" ng-model="customer.status"
 								value="Res" name="status" /> Res <input type="radio"
@@ -78,13 +75,13 @@
 								name="status" /> OCI <input type="radio"
 								ng-model="customer.staus" value="foreign National" name="status" />
 								Foreign National</td>
-						</tr>
-						<tr>
+						</tr> -->
+						<!-- <tr>
 							<td><label align=center>Nationlity</label></td>
 							<td><input type="text" placeholder="Enter Nationality"
 								ng-model="customer.nationality"></td>
-						</tr>
-						<tr>
+						</tr> -->
+						<!-- <tr>
 							<td><label align=center>Category</label></td>
 							<td><input type="radio" ng-model="customer.category"
 								value="SC" name="category" /> SC <input type="radio"
@@ -108,9 +105,9 @@
 								name="education" /> Professional <input type="radio"
 								ng-model="customer.education" value="Others" name="education" />
 								Others</td>
-						</tr>
+						</tr> -->
 						<tr>
-							<td><label align=center>Marital Status</label></td>
+							<td><label align=center>Marital Status*</label></td>
 							<td><input type="radio" ng-model="customer.maritalstatus"
 								value="single" name="maritalstatus" /> Single <input
 								type="radio" ng-model="customer.maritalstatus" value="married"
@@ -120,15 +117,18 @@
 						
 					</table>
 				</div>
-				<div class="panel-footer" align="center">
-					<button ng-click="back()" class="btn-primary"
-						ng-class="{'button-hidden':checkNextBack()}">< Back</button>
-
-					<button ng-click="edit()" class="btn-primary"
-						ng-class="{'button-hidden':checkEdit()}" align="center">Edit</button>
-					<button ng-click="next()" class="btn-primary"
-						ng-class="{'button-hidden':checkNextBack()}">Next ></button>
-				</div>
+				
+					<div class="panel-footer" align="center">
+						<button ng-click="back()" class="btn-primary"
+							ng-class="{'button-hidden':checkNextBack()}">< Back</button>
+						<button ng-click="edit()" class="btn-primary"
+							ng-class="{'button-hidden':checkEdit()}" align="center">Edit</button>
+						<button ng-click="save()" class="btn-primary"
+						ng-class="{'button-hidden':checkSave()}" align="center">Save</button>
+						<button ng-click="next()" class="btn-primary"
+							ng-class="{'button-hidden':checkNextBack()}">Next ></button>
+					</div>
+		
 	</form>
 </body>
 </html>

@@ -3,42 +3,40 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">Employment Details</div>
 			<div class="panel-body">
+			<label ng-class="{'button-hidden':checkNextBack()}"> <b>Fields marked with * are mandatory</b></label>
+					<br /> <br />
 				<table align="center">
 		
 						<tr>
-							<td><label align=center>Employment Nature</label></td>
+							<td><label align=center>Employment Type* </label></td>
 							<td><input type="radio" ng-model="customer.empNature"
 								value="SC" name="empNature" /> Salaried <input type="radio"
 								ng-model="customer.empNature" value="ST" name="empNature" />
-								SelfEmployed</td>
+								Self-Employed</td>
 						</tr>
 						<tr>
 							<td><label align=center>Designation</label></td>
 							<td><input type="text" placeholder="Enter Designation"
-								ng-model="customer.designation"></td>
+								ng-model="customer.designation" size="17"></td>
 						</tr>
 						<tr>
 							<td><label align=center>Department</label></td>
 							<td><input type="text" placeholder="Enter Department"
-								ng-model="customer.department"></td>
+								ng-model="customer.department" size="17"></td>
 						</tr>
 						<tr>
-							<td><label align=center>Name of Employer/Business</label></td>
+							<td><label align=center>Employer's Name* </label></td>
 							<td><input type="text"
-								placeholder="Enter Name of Employer/Business"
-								ng-model="customer.ebName"></td>
+								placeholder="Enter Employer's Name"
+								ng-model="customer.ebName" size="17"></td>
 						</tr>
 						<tr>
-							<td><label align=center>Nature of Organization</label></td>
+							<td><label align=center>Type of Organization* </label></td>
 							<td><input type="radio" ng-model="customer.organization"
 								value="SC" name="organization" /> GOVT <input type="radio"
 								ng-model="customer.organization" value="ST" name="organization" />
-								Public Ltd. <input type="radio" ng-model="customer.organization"
-								value="OBC" name="organization" /> Pvt Ltd. <input type="radio"
-								ng-model="customer.organization" value="General"
-								name="organization" /> MNC <input type="radio"
-								ng-model="customer.organization" value="Others"
-								name="organization" /> Patnership <input type="radio"
+								Public <input type="radio" ng-model="customer.organization"
+								value="OBC" name="organization" /> Private <input type="radio"
 								ng-model="customer.organization" value="Others"
 								name="organization" /> Others</td>
 						</tr>
@@ -46,7 +44,7 @@
 						<!-- <td><label align="center">Period in current Employement/Business</label>
 						<td><input type="number" ng-model="size" name="size"  min="0" max="100" integer />{{size}}</td>
 						</tr> -->
-						<tr>
+						<!-- <tr>
 							<td><label> Period in current Employement/Business </label></td>
 							<td><input type="number" ng-model="customer.CurrentEmpYears" name="years"  min="0" max="100" integer />
 							<label> Years </label>
@@ -59,57 +57,82 @@
 							<label> Years </label>
 							<input type="number" ng-model="customer.TotalEmpMonths" name="Months"  min="0" max="12" integer />
 								<label> Months </label></td>
-						</tr>
+						</tr> -->
 						<!--Employer  Office address -->
-						<tr>
+						<!-- <tr>
 							<td><label align=center><b>Address of Employer</b></label></td>
 
-						</tr>
+						</tr> -->
 						<tr>
-							<td><label align=center>D.No*</label></td>
-							<td><input type="text" placeholder="Enter House Number"
-								ng-model="customer.dno"></td>
+							<td><label align=center>Address of Employer* </label></td>
+							<td><!-- <input type="text" placeholder="Enter Address of Employer"
+								ng-model="customer.dno"> -->
+								<textarea rows="2" cols="19" placeholder="Enter Address of Employer" ng-model="customer.dno"></textarea></td>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td><label align=center>Street Name</label></td>
 							<td><input type="text" placeholder="Enter Street Name"
 								ng-model="customer.streetName"></td>
-						</tr>
-						<tr>
-							<td><label align=center>city</label></td>
-							<td><input type="text" placeholder="Enter City"
-								ng-model="customer.city"></td>
-						</tr>
-						<tr>
-							<td><label align=center>State</label></td>
-							<td><input type="text" placeholder="Enter State"
-								ng-model="customer.State"></td>
-						</tr>
-						<tr>
-							<td><label align=center>Country</label></td>
+						</tr> -->
+						
+						<!-- <tr>
+							<td><label align=center>Country* </label></td>
 							<td><input type="text" placeholder="Enter Country"
 								ng-model="customer.country"></td>
 						</tr>
 						<tr>
+							<td><label align=center>State* </label></td>
+							<td><input type="text" placeholder="Enter State"
+								ng-model="customer.State"></td>
+						</tr>
+						<tr>
+							<td><label align=center>City* </label></td>
+							<td><input type="text" placeholder="Enter City"
+								ng-model="customer.city"></td>
+						</tr> -->
+						
+						<tr>
+						<td align="left"><label>Country*</label></td>
+						<td><select name="country" ng-model="customer.ECountry"
+							ng-options="c.name for c in countries" required>
+								<option value="">--Select--</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td align="left"><label>State*</label></td>
+						<td><select name="country" ng-model="customer.EState"
+							ng-options="c.name for c in States" required>
+								<option value="">--Select--</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td align="left"><label>City*</label></td>
+						<td><select name="city" ng-model="customer.ECity"
+							ng-options="c.name for c in cities" required>
+								<option value="">--Select--</option>
+						</select></td>
+					</tr>
+						
+						<!-- <tr>
 							<td><label align=center>Land Mark*</label></td>
 							<td><input type="text" placeholder="Nearest LandMark"
 								ng-model="customer.landMark"></td>
-						</tr>
+						</tr> -->
 						<tr>
 							<td><label align=center>Pincode*</label></td>
-							<td><input type="text" placeholder="Pincode"
-								ng-model="customer.pincode"></td>
+							<td><input type="text" placeholder="Enter Pincode"
+								ng-model="customer.pincode" size="17"></td>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<td><label align=center>Mobile Number*</label></td>
 							<td><input type="text" placeholder="Enter Mobile Number"
 								ng-model="customer.mobile"></td>
-						</tr>
-						<tr>
-							<td><label align=center>Personal Email*</label></td>
+						</tr> -->
+						<!-- <tr>
+							<td><label align=center>Off Email*</label></td>
 							<td><input type="text" placeholder="Enter Email"
 								ng-model="customer.email"></td>
-						</tr>
+						</tr> -->
 						<!-- My stuff start -->
 
 
@@ -139,6 +162,8 @@
 
 					<button ng-click="edit()" class="btn-primary"
 						ng-class="{'button-hidden':checkEdit()}" align="center">Edit</button>
+					<button ng-click="save()" class="btn-primary"
+						ng-class="{'button-hidden':checkSave()}" align="center">Save</button>
 					<button ng-click="next()" class="btn-primary"
 						ng-class="{'button-hidden':checkNextBack()}">Next ></button>
 				</div>

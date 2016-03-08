@@ -1,6 +1,7 @@
 <body>
 <fieldset name="reviewFieldSet" disabled>
 	<div class="tab-content" align="center">
+	<div align="left" style="color:White"><b>Fields marked with * are mandatory</b></div> 
 		 <div name="personalFields" ng-include='"html/personalDetails.html"' ></div>
 		<div ng-include='"html/contactsDetails.html"' ></div>
 		<div ng-include='"html/employmentDetails.html"' ></div>
@@ -48,7 +49,8 @@
 	</div> --> 
 </fieldset>
 <div>
-	<div class="panel-footer" align="center">
+	<div class="panel panel-default panel-footer" align="center">
+	
 		  <button ng-click="submit()" class="btn-primary" align="center">submit</button>
 		 </div>
 </div>
