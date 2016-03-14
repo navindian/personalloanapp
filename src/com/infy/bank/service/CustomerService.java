@@ -17,7 +17,7 @@ import com.infy.bank.pojo.PersonalDeatilsPojo;
 @Path("/customer")
 public class CustomerService {
 	@POST
-	@Path("/saveCustomerPersonal")
+	@Path("/saveCustomer")
 	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public String savePersonalDetails(String json) throws  JsonMappingException, IOException

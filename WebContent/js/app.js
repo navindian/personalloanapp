@@ -44,25 +44,25 @@ ABCBank.controller('AppCtrl',function($scope,$window,$route) {
 $scope.customer={};
 $scope.countries = [ {
 	'name' : 'India'
-		/*}, {
-			'name' : 'US'
-		}, {
-			'name' : 'Australia'
-		*/} ];
-		$scope.States = [ {
-			'name' : 'Telangana'
-		/*}, {
-			'name' : 'Andhrapradesh'
-		}, {
-			'name' : 'Tamilnade'
-		*/} ];
-		$scope.cities = [ {
-			'name' : 'Hyderabad'
-		/*}, {
-			'name' : 'Vizag'*/
-		}, {
-			'name' : 'Khammam'
-		} ];
+}, {
+	'name' : 'US'
+}, {
+	'name' : 'Australia'
+} ];
+$scope.States = [ {
+	'name' : 'Telangana'
+}, {
+	'name' : 'Andhrapradesh'
+}, {
+	'name' : 'Tamilnade'
+} ];
+$scope.cities = [ {
+	'name' : 'Hyderabad'
+}, {
+	'name' : 'Vizag'
+}, {
+	'name' : 'Khammam'
+} ];
 
 $scope.edit = function() {
 	$window.alert("Edit  details");
@@ -207,8 +207,8 @@ ABCBank.controller('reviewSubmitCtrl',function($scope, $location,$window,$http) 
 	}*/
 	$scope.submit = function() {
 		$window.alert('form has submitted');
-		//var res=$http.post('/AngularjsPoc/rest/getCustomerPersonal',$scope.customer);
-		var res=$http.get('/AngularjsPoc/rest/test');
+		var res=$http.post('/AngularjsPoc/rest/customer/saveCustomer',$scope.customer);
+		/*var res=$http.get('/AngularjsPoc/rest/test');*/
 		res.success(function(data, status, headers, config) {
 			$scope.message = data;
 		});
